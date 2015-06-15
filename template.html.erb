@@ -1,0 +1,43 @@
+<!doctype html5>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title><%= title %></title>
+    <style>
+      <%= css %>
+      .page ~ .page:before {
+        content: "<%= short_title || title %> • <%= author %>";
+      }
+    </style>
+  </head>
+  <body class="<%= bodyclass %>">
+    <div>
+      <div class="source">
+        <article class="source-inner">
+          <header class="title-page">
+            <div class="title-card">
+              <h1><%= title %></h1>
+              <div class="author"><%= author %> • <%= year %></div>
+              <div class="question"><%= question %></div>
+            </div>
+            <time pubdate><%= date %></time>
+            <div class="lecturer"><%= lecturer %> • <%= course %></div>
+          </header>
+          <% if toc_html %>
+            <div class="toc-page">
+              <div class="toc-card">
+                <h1>Essay plan</h1>
+                <ul class="toc"><%= toc_html %></ul>
+              </div>
+            </div>
+          <% end %>
+          <%= content_html %>
+        </article>
+      </div>
+      <div class="page"><div class="content"></div></div>
+    </div>
+    <script>
+      <%= js %>
+    </script>
+  </body>
+<html>
