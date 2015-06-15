@@ -5,15 +5,11 @@ This is a little super-rough command-line tool for rendering markdown into html,
 
 It uses CSS regions which are presently only available to safari (I investigated wkhtmltopdf, it doesn't have css regions either).
 
-It uses a yml preamble.
+It uses a yml preamble. (other keys are in `essay.rb`)
 
-```
-title:
-author:
-lecturer:
-course:
-year:
-date:
+``` markdown
+title: Awesome title
+author: Dan Sherson
 ---
 
 ## Introduction
@@ -27,9 +23,13 @@ Lorem Ipsum...
 
 ```
 
-`./essay.rb [sourcefile.markdown]`
+Use:
 
-writes html next to the markdown as `[sourcefile.markdown].html`
+``` sh
+./essay.rb [sourcefile.markdown]
+```
+
+writes html file next to the markdown file as `[sourcefile.markdown].html`
 
 Get a PDF by printing to PDF from safari.
 
