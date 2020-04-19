@@ -9,7 +9,7 @@ It uses a yml preamble. (other keys are in `essay.rb`)
 
 ``` markdown
 title: Awesome title
-author: Dan Sherson
+author: Dana Sherson
 ---
 
 ## Introduction
